@@ -1,0 +1,577 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap');
+@import url(//db.onlinewebfonts.com/c/73f304ed420c6cca37933b6cf48b9489?family=Sometimes+Times);
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+    /* dark shades of primary color*/
+    --clr-primary-1: #f7f5f2;
+    --clr-primary-2: #A7A49C;
+    --clr-primary-3: #fdfdfd;
+    --clr-font: #303030;
+    /* --clr-primary-1: hsl(205, 86%, 17%); */
+    /* --clr-primary-2: hsl(205, 77%, 27%); */
+    /* --clr-primary-3: hsl(205, 72%, 37%); */
+    --clr-primary-4: hsl(205, 63%, 48%);
+    /* primary/main color */
+    --clr-primary-5: hsl(205, 78%, 60%);
+    /* lighter shades of primary color */
+    --clr-primary-6: hsl(205, 89%, 70%);
+    --clr-primary-7: hsl(205, 90%, 76%);
+    --clr-primary-8: hsl(205, 86%, 81%);
+    --clr-primary-9: hsl(205, 90%, 88%);
+    --clr-primary-10: hsl(205, 100%, 96%);
+    /* darkest grey - used for headings */
+    --clr-grey-1: hsl(209, 61%, 16%);
+    --clr-grey-2: hsl(211, 39%, 23%);
+    --clr-grey-3: hsl(209, 34%, 30%);
+    --clr-grey-4: hsl(209, 28%, 39%);
+    /* grey used for paragraphs */
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-grey-6: hsl(209, 23%, 60%);
+    --clr-grey-7: hsl(211, 27%, 70%);
+    --clr-grey-8: hsl(210, 31%, 80%);
+    --clr-grey-9: hsl(212, 33%, 89%);
+    --clr-grey-10: hsl(210, 36%, 96%);
+    --clr-white: #fff;
+    --clr-red-dark: hsl(360, 67%, 44%);
+    --clr-red-light: hsl(360, 71%, 66%);
+    --clr-green-dark: hsl(125, 67%, 44%);
+    --clr-green-light: hsl(125, 71%, 66%);
+    --clr-black: #1d1e1b;
+    --ff-primary: 'Open Sans', sans-serif;
+    --ff-secondary: 'Sometimes times';
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --spacingnav: 1rem;
+    --radius: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+}
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--ff-primary);
+    background: var(--clr-primary-1);
+    color: var(--clr-font);
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: var(--spacing);
+    line-height: 1.35;
+    font-weight: 100;
+    margin-bottom: 0.75rem;
+    font-family: var(--ff-secondary);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 0.875rem;
+}
+
+p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+    color: var(--clr-black);
+}
+
+button {
+    background-color: var(--clr-primary-2);
+    border: none;
+    color: var(--clr-white);
+    padding: 0.8rem;
+    font-weight: 100;
+    font-size: 0.7rem;
+    font-family: Helvetica, sans-serif;
+}
+
+.button :hover {
+    opacity: 0.9;
+}
+
+hr {
+    width: 28%;
+    margin-left: 9.6rem;
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    body {
+        font-size: 1rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        line-height: 1;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 2.7rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 0.75rem;
+    }
+
+    h4 {
+        font-size: 0.3rem;
+    }
+
+    body {
+        font-size: 1rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        line-height: 1;
+    }
+}
+
+/*  global classes */
+
+/* section */
+.section {
+    padding: 5rem 0;
+}
+
+.section-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+@media screen and (min-width: 992px) {
+    .section-center {
+        width: 95vw;
+    }
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    place-items: center;
+}
+
+/*
+=============== 
+Navbar
+===============
+*/
+nav {
+    background: transparent;
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.nav-toggle {
+    font-size: 1.5rem;
+    color: var(--clr-black);
+    background: transparent;
+    border-color: transparent;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.nav-toggle:hover {
+    color: var(--clr-primary-1);
+    transform: rotate(90deg);
+}
+
+.logo {
+    height: 40px;
+}
+
+.links a {
+    color: var(--clr-font);
+    font-size: 0.7rem;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    display: block;
+    font-weight: 300;
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+}
+
+.links a:hover {
+    color: var(--clr-primary-2);
+}
+
+.social-icons {
+    display: none;
+}
+
+.links {
+    height: 0;
+    overflow: hidden;
+    /* transition: var(--transition); */
+}
+
+.show-links {
+    height: 50rem;
+    text-align: center;
+    margin-top: 50%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.col-left {
+    background-image: url('./hero-bg.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* z-index: -1; */
+}
+
+.heroright {
+    background-image: url('./handsconnect.jpeg');
+    background-size: 19rem;
+    background-repeat: no-repeat;
+    background-position: 50% 58%;
+    margin: 6rem 11rem;
+    margin-bottom: 11rem;
+    text-align: center;
+    color: var(--clr-black);
+}
+
+.heroright h4 {
+    font-family: Open Sans;
+    color: var(--clr-primary-2);
+    margin-top: 20rem;
+}
+
+.welcome {
+    background-color: var(--clr-primary-3);
+    padding: 8rem;
+}
+
+.welcome-column {
+    margin: 8rem 0 0 5rem;
+}
+
+.welcome-column h4 {
+    font-family: Poppins;
+    color: var(--clr-primary-2);
+    margin-bottom: 2rem;
+}
+
+.welcome img {
+    width: 25rem;
+    border-top-left-radius: 24rem;
+    border-top-right-radius: 24rem;
+}
+
+.welcome span {
+    vertical-align: inherit;
+}
+
+.profile-column {
+    margin: 3rem 0 0 9rem;
+}
+
+.services {
+    text-align: center;
+    color: var(--clr-black);
+    padding: 4.5rem;
+}
+
+.services img {
+    height: 30rem;
+    padding: 2rem;
+    margin-top: 10rem;
+    border-top-left-radius: 28rem;
+    border-top-right-radius: 28rem;
+}
+
+.services p {
+    text-decoration: underline;
+}
+
+.about {
+    background-color: var(--clr-primary-3);
+    /* padding: 8rem; */
+}
+
+.aboutbg {
+    background-image: url('./stonebg.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.about-column {
+    padding: 15rem 3em;
+}
+
+.contact {
+    background-color: var(--clr-primary-3);
+}
+
+.contact-column {
+    text-align: center;
+    padding: 7rem;
+}
+
+.reviews {
+    text-align: center;
+}
+
+.review-column {
+    padding: 6rem;
+}
+
+.reviews p {
+    padding: 1rem 12rem;
+}
+
+.next-btn {
+    position: absolute;
+    right: 0;
+    margin-top: -7.5rem;
+    margin-right: 10rem;
+    font-size: 1.5rem;
+    color: var(--clr-black);
+    background-color: transparent;
+}
+
+.prev-btn {
+    position: absolute;
+    left: 0;
+    margin-top: -7.5rem;
+    margin-left: 10rem;
+    font-size: 1.5rem;
+    color: var(--clr-black);
+    background-color: transparent;
+}
+
+
+@media screen and (min-width: 800px) {
+    .nav-center {
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    .nav-header {
+        padding: 0;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .links {
+        height: auto;
+        display: flex;
+        padding: 1.3rem 0 0 0;
+    }
+
+    .links a {
+        padding: 0;
+        margin: 0 1.9rem;
+    }
+
+    .links a:hover {
+        padding: 0;
+        background: transparent;
+    }
+
+    .social-icons {
+        display: flex;
+    }
+
+    .social-icons a {
+        margin: 0.5rem;
+        color: var(--clr-font);
+    }
+
+    .social-icons a:hover {
+        color: var(--clr-primary-2);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .button {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .col-left {
+        display: none;
+    }
+
+    .heroright {
+        margin: 6rem 4rem;
+        background-size: 14rem;
+        background-position: 50% 48%;
+    }
+
+    .heroright h4 {
+        font-size: 0.9rem;
+        margin-top: 17rem;
+    }
+
+    .welcome {
+        background-color: var(--clr-primary-3);
+        padding: 1.3rem;
+    }
+
+    .welcome-column {
+        margin: 0;
+    }
+
+    .welcome img {
+        width: 18rem;
+        border-top-left-radius: 24rem;
+        border-top-right-radius: 24rem;
+    }
+
+    .welcome-column h4 {
+        font-size: 1.3rem;
+        margin: 1.7rem 0rem;
+    }
+
+    .profile-column {
+        text-align: center;
+        margin: 0;
+    }
+
+    .services {
+        text-align: center;
+        color: var(--clr-black);
+        padding: 0;
+        margin-top: 3rem;
+    }
+
+    .services img {
+        height: 20rem;
+        padding: 0;
+        margin-top: 4rem;
+        border-top-left-radius: 24rem;
+        border-top-right-radius: 24rem;
+    }
+
+    .about-column {
+        padding: 8rem 1.3rem;
+    }
+
+    .aboutbg {
+        height: 240rem;
+    }
+
+    .contact-column {
+        text-align: center;
+        padding: 0;
+        margin-top: 9rem;
+    }
+
+    .reviews p {
+        padding: 0px;
+    }
+
+    .review-column {
+        padding: 3rem;
+    }
+
+    .next-btn {
+        margin-top: -0.5rem;
+    }
+
+    .prev-btn {
+        margin-top: -0.5rem;
+    }
+}
